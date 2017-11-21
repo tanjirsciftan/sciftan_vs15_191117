@@ -32,5 +32,6 @@ namespace SCIFTAN.DAL.DB.EF
         public virtual DbSet<FREELANCER_EXPERIENCE_INFO> FREELANCER_EXPERIENCE_INFO { get; set; }
         public virtual DbSet<SKILL> SKILLs { get; set; }
         public virtual DbSet<FREELANCER_SKILL_INFO> FREELANCER_SKILL_INFO { get; set; }
+
     }
 }

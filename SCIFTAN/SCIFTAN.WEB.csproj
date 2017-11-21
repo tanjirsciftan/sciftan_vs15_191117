@@ -210,6 +210,7 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\UnityConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\FreelancerCareerObjectiveController.cs" />
     <Compile Include="Controllers\FreelancerEducationInfoController.cs" />
     <Compile Include="Controllers\FreelancerExperienceInfoController.cs" />
     <Compile Include="Controllers\FreelancerSkillInfoController.cs" />
@@ -285,6 +286,9 @@
     <Content Include="Views\FreelancerSkillInfo\Delete.cshtml" />
     <Content Include="Views\FreelancerSkillInfo\Edit.cshtml" />
     <Content Include="Views\FreelancerSkillInfo\Index.cshtml" />
+    <Content Include="Views\FreelancerCareerObjective\Index.cshtml" />
+    <Content Include="Views\FreelancerCareerObjective\Create.cshtml" />
+    <Content Include="Views\FreelancerCareerObjective\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

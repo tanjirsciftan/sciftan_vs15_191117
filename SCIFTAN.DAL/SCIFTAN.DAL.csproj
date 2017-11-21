@@ -84,11 +84,13 @@
     <Compile Include="DB\EF\SKILL.cs">
       <DependentUpon>SCIFTAN.tt</DependentUpon>
     </Compile>
+    <Compile Include="IRepository\IFreelancerCareerObjectiveRepository.cs" />
     <Compile Include="IRepository\IFreelancerEducationInfoRepository.cs" />
     <Compile Include="IRepository\IFreelancerExperienceInfoRepository.cs" />
     <Compile Include="IRepository\IFreelancerPersonalInfoRepository.cs" />
     <Compile Include="IRepository\IFreelancerSkillInfoRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\FreelancerCareerObjectiveRepository.cs" />
     <Compile Include="Repository\FrelancerEducationInfoRepository.cs" />
     <Compile Include="Repository\FrelancerExperienceInfoRepository.cs" />
     <Compile Include="Repository\FrelancerPersonalInfoRepository.cs" />

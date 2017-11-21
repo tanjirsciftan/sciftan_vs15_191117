@@ -29,6 +29,8 @@ namespace SCIFTAN
             container.RegisterType<IFreelancerExperienceInfoService, FreelancerExperienceInfoService>();
             container.RegisterType<IFreelancerSkillInfoRepository, FrelancerSkillInfoRepository>();
             container.RegisterType<IFreelancerSkillInfoService, FreelancerSkillInfoService>();
+            container.RegisterType<IFreelancerCareerObjectiveRepository, FreelancerCareerObjectiveRepository>();
+            container.RegisterType<IFreelancerCareerObjectiveService, FreelancerCareerObjectiveService>();
 
 
             DependencyResolver.SetResolver(new UnityDependencyResolver(container));
