@@ -11,6 +11,8 @@ namespace SCIFTAN.BLL.ModelMapping
 
             CreateMap<FREELANCER_PERSONAL_INFO_Model, FREELANCER_PERSONAL_INFO>();
             CreateMap<FREELANCER_EDUCATION_INFO_Model, FREELANCER_EDUCATION_INFO>();
+            CreateMap<FREELANCER_EXPERIENCE_INFO_Model, FREELANCER_EXPERIENCE_INFO>();
+            CreateMap<FREELANCER_SKILL_INFO_Model, FREELANCER_SKILL_INFO>();
         }
     }
 }

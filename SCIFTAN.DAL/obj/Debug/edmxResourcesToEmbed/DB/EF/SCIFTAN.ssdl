@@ -1,5 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="SciftanModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="FREELANCER_CAREER_OBJECTIVE">
+    <Key>
+      <PropertyRef Name="Freelancer_Id" />
+    </Key>
+    <Property Name="Freelancer_Id" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Career_Objective" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="FREELANCER_DOC_INFO">
+    <Key>
+      <PropertyRef Name="Freelancer_Id" />
+    </Key>
+    <Property Name="Freelancer_Id" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="NID_Path" Type="nvarchar" MaxLength="250" />
+    <Property Name="Picture_Path" Type="nvarchar" MaxLength="250" />
+    <Property Name="PVC_Path" Type="nvarchar" MaxLength="250" />
+  </EntityType>
   <EntityType Name="FREELANCER_EDUCATION_INFO">
     <Key>
       <PropertyRef Name="Id" />
@@ -11,6 +27,20 @@
     <Property Name="Year" Type="int" />
     <Property Name="Result" Type="nvarchar" MaxLength="50" />
     <Property Name="Subject" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="FREELANCER_EXPERIENCE_INFO">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Freelancer_Id" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Organization" Type="nvarchar" MaxLength="250" />
+    <Property Name="Designation" Type="nvarchar" MaxLength="50" />
+    <Property Name="Responsibilities" Type="nvarchar(max)" />
+    <Property Name="AreaofExperiences" Type="nvarchar(max)" />
+    <Property Name="Location" Type="nvarchar(max)" />
+    <Property Name="FromDate" Type="date" />
+    <Property Name="ToDate" Type="date" />
   </EntityType>
   <EntityType Name="FREELANCER_PERSONAL_INFO">
     <Key>
@@ -33,8 +63,29 @@
     <Property Name="Mobile2" Type="nvarchar" MaxLength="15" />
     <Property Name="Email" Type="nvarchar" MaxLength="50" />
   </EntityType>
+  <EntityType Name="FREELANCER_SKILL_INFO">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Freelancer_Id" Type="nvarchar" MaxLength="50" />
+    <Property Name="Skill" Type="int" />
+    <Property Name="Description" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="SKILL">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+  </EntityType>
   <EntityContainer Name="SciftanModelStoreContainer">
+    <EntitySet Name="FREELANCER_CAREER_OBJECTIVE" EntityType="Self.FREELANCER_CAREER_OBJECTIVE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FREELANCER_DOC_INFO" EntityType="Self.FREELANCER_DOC_INFO" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="FREELANCER_EDUCATION_INFO" EntityType="Self.FREELANCER_EDUCATION_INFO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FREELANCER_EXPERIENCE_INFO" EntityType="Self.FREELANCER_EXPERIENCE_INFO" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="FREELANCER_PERSONAL_INFO" EntityType="Self.FREELANCER_PERSONAL_INFO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FREELANCER_SKILL_INFO" EntityType="Self.FREELANCER_SKILL_INFO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SKILL" EntityType="Self.SKILL" Schema="dbo" store:Type="Tables" />
   </EntityContainer>
 </Schema>

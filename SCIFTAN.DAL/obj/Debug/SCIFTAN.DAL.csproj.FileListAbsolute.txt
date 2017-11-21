@@ -38,3 +38,13 @@ E:\TANJIR\OTHERS\sciftan_vs15\sciftan_vs15\SCIFTAN.DAL\bin\Debug\EntityFramework
 E:\TANJIR\OTHERS\sciftan_vs15\sciftan_vs15\SCIFTAN.DAL\obj\Debug\SCIFTAN.DAL.csprojResolveAssemblyReference.cache
 E:\TANJIR\OTHERS\sciftan_vs15\sciftan_vs15\SCIFTAN.DAL\obj\Debug\SCIFTAN.DAL.dll
 E:\TANJIR\OTHERS\sciftan_vs15\sciftan_vs15\SCIFTAN.DAL\obj\Debug\SCIFTAN.DAL.pdb
+E:\TANJIR\OTHERS\sciftan_vs15\sciftan_vs15_191117\SCIFTAN.DAL\bin\Debug\SCIFTAN.DAL.dll.config
+E:\TANJIR\OTHERS\sciftan_vs15\sciftan_vs15_191117\SCIFTAN.DAL\bin\Debug\SCIFTAN.DAL.dll
+E:\TANJIR\OTHERS\sciftan_vs15\sciftan_vs15_191117\SCIFTAN.DAL\bin\Debug\SCIFTAN.DAL.pdb
+E:\TANJIR\OTHERS\sciftan_vs15\sciftan_vs15_191117\SCIFTAN.DAL\bin\Debug\EntityFramework.dll
+E:\TANJIR\OTHERS\sciftan_vs15\sciftan_vs15_191117\SCIFTAN.DAL\bin\Debug\EntityFramework.SqlServer.dll
+E:\TANJIR\OTHERS\sciftan_vs15\sciftan_vs15_191117\SCIFTAN.DAL\bin\Debug\EntityFramework.xml
+E:\TANJIR\OTHERS\sciftan_vs15\sciftan_vs15_191117\SCIFTAN.DAL\bin\Debug\EntityFramework.SqlServer.xml
+E:\TANJIR\OTHERS\sciftan_vs15\sciftan_vs15_191117\SCIFTAN.DAL\obj\Debug\SCIFTAN.DAL.dll
+E:\TANJIR\OTHERS\sciftan_vs15\sciftan_vs15_191117\SCIFTAN.DAL\obj\Debug\SCIFTAN.DAL.pdb
+E:\TANJIR\OTHERS\sciftan_vs15\sciftan_vs15_191117\SCIFTAN.DAL\obj\Debug\SCIFTAN.DAL.csprojResolveAssemblyReference.cache

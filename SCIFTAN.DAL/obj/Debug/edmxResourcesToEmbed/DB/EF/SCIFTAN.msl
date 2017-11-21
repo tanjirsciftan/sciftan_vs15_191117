@@ -36,5 +36,56 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="FREELANCER_CAREER_OBJECTIVE">
+      <EntityTypeMapping TypeName="SciftanModel.FREELANCER_CAREER_OBJECTIVE">
+        <MappingFragment StoreEntitySet="FREELANCER_CAREER_OBJECTIVE">
+          <ScalarProperty Name="Career_Objective" ColumnName="Career_Objective" />
+          <ScalarProperty Name="Freelancer_Id" ColumnName="Freelancer_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FREELANCER_DOC_INFO">
+      <EntityTypeMapping TypeName="SciftanModel.FREELANCER_DOC_INFO">
+        <MappingFragment StoreEntitySet="FREELANCER_DOC_INFO">
+          <ScalarProperty Name="PVC_Path" ColumnName="PVC_Path" />
+          <ScalarProperty Name="Picture_Path" ColumnName="Picture_Path" />
+          <ScalarProperty Name="NID_Path" ColumnName="NID_Path" />
+          <ScalarProperty Name="Freelancer_Id" ColumnName="Freelancer_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FREELANCER_EXPERIENCE_INFO">
+      <EntityTypeMapping TypeName="SciftanModel.FREELANCER_EXPERIENCE_INFO">
+        <MappingFragment StoreEntitySet="FREELANCER_EXPERIENCE_INFO">
+          <ScalarProperty Name="ToDate" ColumnName="ToDate" />
+          <ScalarProperty Name="FromDate" ColumnName="FromDate" />
+          <ScalarProperty Name="Location" ColumnName="Location" />
+          <ScalarProperty Name="AreaofExperiences" ColumnName="AreaofExperiences" />
+          <ScalarProperty Name="Responsibilities" ColumnName="Responsibilities" />
+          <ScalarProperty Name="Designation" ColumnName="Designation" />
+          <ScalarProperty Name="Organization" ColumnName="Organization" />
+          <ScalarProperty Name="Freelancer_Id" ColumnName="Freelancer_Id" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SKILLs">
+      <EntityTypeMapping TypeName="SciftanModel.SKILL">
+        <MappingFragment StoreEntitySet="SKILL">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FREELANCER_SKILL_INFO">
+      <EntityTypeMapping TypeName="SciftanModel.FREELANCER_SKILL_INFO">
+        <MappingFragment StoreEntitySet="FREELANCER_SKILL_INFO">
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Skill" ColumnName="Skill" />
+          <ScalarProperty Name="Freelancer_Id" ColumnName="Freelancer_Id" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

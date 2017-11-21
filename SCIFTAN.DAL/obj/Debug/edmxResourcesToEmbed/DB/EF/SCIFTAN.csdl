@@ -24,6 +24,11 @@
   <EntityContainer Name="SciftanDbContext" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="FREELANCER_PERSONAL_INFO" EntityType="Self.FREELANCER_PERSONAL_INFO" />
     <EntitySet Name="FREELANCER_EDUCATION_INFO" EntityType="SciftanModel.FREELANCER_EDUCATION_INFO" />
+    <EntitySet Name="FREELANCER_CAREER_OBJECTIVE" EntityType="SciftanModel.FREELANCER_CAREER_OBJECTIVE" />
+    <EntitySet Name="FREELANCER_DOC_INFO" EntityType="SciftanModel.FREELANCER_DOC_INFO" />
+    <EntitySet Name="FREELANCER_EXPERIENCE_INFO" EntityType="SciftanModel.FREELANCER_EXPERIENCE_INFO" />
+    <EntitySet Name="SKILLs" EntityType="SciftanModel.SKILL" />
+    <EntitySet Name="FREELANCER_SKILL_INFO" EntityType="SciftanModel.FREELANCER_SKILL_INFO" />
   </EntityContainer>
   <EntityType Name="FREELANCER_EDUCATION_INFO">
     <Key>
@@ -36,5 +41,51 @@
     <Property Name="Year" Type="Int32" />
     <Property Name="Result" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="Subject" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="FREELANCER_CAREER_OBJECTIVE">
+    <Key>
+      <PropertyRef Name="Freelancer_Id" />
+    </Key>
+    <Property Name="Freelancer_Id" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Career_Objective" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="FREELANCER_DOC_INFO">
+    <Key>
+      <PropertyRef Name="Freelancer_Id" />
+    </Key>
+    <Property Name="Freelancer_Id" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NID_Path" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Picture_Path" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="PVC_Path" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="FREELANCER_EXPERIENCE_INFO">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Freelancer_Id" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Organization" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Designation" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Responsibilities" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="AreaofExperiences" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Location" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="FromDate" Type="DateTime" Precision="0" />
+    <Property Name="ToDate" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityType Name="SKILL">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="FREELANCER_SKILL_INFO">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Freelancer_Id" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Skill" Type="Int32" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
   </EntityType>
 </Schema>

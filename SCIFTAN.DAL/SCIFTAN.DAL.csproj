@@ -48,10 +48,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DB\EF\FREELANCER_CAREER_OBJECTIVE.cs">
+      <DependentUpon>SCIFTAN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\EF\FREELANCER_DOC_INFO.cs">
+      <DependentUpon>SCIFTAN.tt</DependentUpon>
+    </Compile>
     <Compile Include="DB\EF\FREELANCER_EDUCATION_INFO.cs">
       <DependentUpon>SCIFTAN.tt</DependentUpon>
     </Compile>
+    <Compile Include="DB\EF\FREELANCER_EXPERIENCE_INFO.cs">
+      <DependentUpon>SCIFTAN.tt</DependentUpon>
+    </Compile>
     <Compile Include="DB\EF\FREELANCER_PERSONAL_INFO.cs">
+      <DependentUpon>SCIFTAN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\EF\FREELANCER_SKILL_INFO.cs">
       <DependentUpon>SCIFTAN.tt</DependentUpon>
     </Compile>
     <Compile Include="DB\EF\SCIFTAN.Context.cs">
@@ -69,11 +81,18 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>SCIFTAN.edmx</DependentUpon>
     </Compile>
+    <Compile Include="DB\EF\SKILL.cs">
+      <DependentUpon>SCIFTAN.tt</DependentUpon>
+    </Compile>
     <Compile Include="IRepository\IFreelancerEducationInfoRepository.cs" />
+    <Compile Include="IRepository\IFreelancerExperienceInfoRepository.cs" />
     <Compile Include="IRepository\IFreelancerPersonalInfoRepository.cs" />
+    <Compile Include="IRepository\IFreelancerSkillInfoRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\FrelancerEducationInfoRepository.cs" />
+    <Compile Include="Repository\FrelancerExperienceInfoRepository.cs" />
     <Compile Include="Repository\FrelancerPersonalInfoRepository.cs" />
+    <Compile Include="Repository\FrelancerSkillInfoRepository.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

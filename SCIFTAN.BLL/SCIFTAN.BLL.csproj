@@ -88,17 +88,25 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IOC\DependencyInjector.cs" />
     <Compile Include="IService\IFreelancerEducationInfoService.cs" />
+    <Compile Include="IService\IFreelancerExperienceInfoService.cs" />
     <Compile Include="IService\IFreelancerPersonalInfoService.cs" />
+    <Compile Include="IService\IFreelancerSkillInfoService.cs" />
     <Compile Include="ModelMapping\AutoMapperBootStrapper.cs" />
     <Compile Include="ModelMapping\DatabaseToDomainProfile.cs" />
     <Compile Include="ModelMapping\DomainToDatabaseProfile.cs" />
+    <Compile Include="Models\FREELANCER_CAREER_OBJECTIVE_Model.cs" />
+    <Compile Include="Models\FREELANCER_DOC_INFO_Model.cs" />
     <Compile Include="Models\FREELANCER_EDUCATION_INFO_Model.cs" />
+    <Compile Include="Models\FREELANCER_EXPERIENCE_INFO_Model.cs" />
     <Compile Include="Models\FREELANCER_PERSONAL_INFO_Model.cs" />
+    <Compile Include="Models\FREELANCER_SKILL_INFO_Model.cs" />
+    <Compile Include="Models\SKILL_Model.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service\FreelancerEducationInfoService.cs" />
+    <Compile Include="Service\FreelancerExperienceInfoService.cs" />
     <Compile Include="Service\FreelancerPersonalInfoService.cs" />
+    <Compile Include="Service\FreelancerSkillInfoService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

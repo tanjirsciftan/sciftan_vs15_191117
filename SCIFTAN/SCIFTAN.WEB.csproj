@@ -211,6 +211,8 @@
     <Compile Include="App_Start\UnityConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\FreelancerEducationInfoController.cs" />
+    <Compile Include="Controllers\FreelancerExperienceInfoController.cs" />
+    <Compile Include="Controllers\FreelancerSkillInfoController.cs" />
     <Compile Include="Controllers\FrelancerPersonalInfoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
@@ -274,6 +276,15 @@
     <Content Include="Views\FreelancerPersonalInfo\Create.cshtml" />
     <Content Include="Views\FreelancerPersonalInfo\Edit.cshtml" />
     <Content Include="Views\FreelancerPersonalInfo\Index.cshtml" />
+    <Content Include="Views\FreelancerExperienceInfo\Create.cshtml" />
+    <Content Include="Views\FreelancerExperienceInfo\Delete.cshtml" />
+    <Content Include="Views\FreelancerExperienceInfo\Details.cshtml" />
+    <Content Include="Views\FreelancerExperienceInfo\Edit.cshtml" />
+    <Content Include="Views\FreelancerExperienceInfo\Index.cshtml" />
+    <Content Include="Views\FreelancerSkillInfo\Create.cshtml" />
+    <Content Include="Views\FreelancerSkillInfo\Delete.cshtml" />
+    <Content Include="Views\FreelancerSkillInfo\Edit.cshtml" />
+    <Content Include="Views\FreelancerSkillInfo\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
