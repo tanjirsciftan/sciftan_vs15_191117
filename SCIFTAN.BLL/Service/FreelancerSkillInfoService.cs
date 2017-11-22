@@ -15,19 +15,41 @@ namespace SCIFTAN.BLL.Service
     {
 
         private readonly IFreelancerSkillInfoRepository _iFreelancerSkillInfoRepository;
-
-        public FreelancerSkillInfoService(IFreelancerSkillInfoRepository iFreelancerSkillInfoRepository)
+        private readonly ISkillService _iSkillService;
+        public FreelancerSkillInfoService(IFreelancerSkillInfoRepository iFreelancerSkillInfoRepository, ISkillService iSkillService)
         {
             _iFreelancerSkillInfoRepository = iFreelancerSkillInfoRepository;
+            _iSkillService = iSkillService;
         }
         public List<FREELANCER_SKILL_INFO_Model> GetAllByFreelancerId(string freelancerId)
         {
-            return Mapper.Map<List<FREELANCER_SKILL_INFO>, List<FREELANCER_SKILL_INFO_Model>>(_iFreelancerSkillInfoRepository.GetAllByFreelancerId(freelancerId));
+            var freelancerSkills = _iFreelancerSkillInfoRepository.GetAllByFreelancerId(freelancerId);
+            List<FREELANCER_SKILL_INFO_Model> skillModelList = new List<FREELANCER_SKILL_INFO_Model>();
+
+            foreach (var skill in freelancerSkills)
+            {
+                skillModelList.Add(new FREELANCER_SKILL_INFO_Model
+                {
+                    Id = skill.Id,
+                    SkillName = _iSkillService.GetSkillById(skill.Skill).Name.ToString(),
+                    Description = skill.Description
+                });
+            }
+
+            return skillModelList;
         }
 
         public FREELANCER_SKILL_INFO_Model GetById(int? Id)
         {
-            return Mapper.Map<FREELANCER_SKILL_INFO, FREELANCER_SKILL_INFO_Model>(_iFreelancerSkillInfoRepository.GetById(Id));
+            var freelancerSkill = _iFreelancerSkillInfoRepository.GetById(Id);
+
+            var freelancerSkillModel = new FREELANCER_SKILL_INFO_Model{
+                Id = freelancerSkill.Id,
+                SkillName = _iSkillService.GetSkillById(freelancerSkill.Skill).Name.ToString(),
+                Description =freelancerSkill.Description
+            };
+
+            return freelancerSkillModel;
         }
 
         public bool InsertFreelancerSkill(FREELANCER_SKILL_INFO_Model entity)

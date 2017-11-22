@@ -16,9 +16,11 @@ namespace SCIFTAN.Controllers
     public class FreelancerSkillInfoController : Controller
     {
         private readonly IFreelancerSkillInfoService _iFreelancerSkillInfoService;
-        public FreelancerSkillInfoController(IFreelancerSkillInfoService iFreelancerSkillInfoService)
+        private readonly ISkillService _iSkillService;
+        public FreelancerSkillInfoController(IFreelancerSkillInfoService iFreelancerSkillInfoService, ISkillService iSkillService)
         {
             _iFreelancerSkillInfoService = iFreelancerSkillInfoService;
+            _iSkillService = iSkillService;
         }
         public ActionResult Index()
         {
@@ -27,10 +29,9 @@ namespace SCIFTAN.Controllers
 
         public ActionResult Create()
         {
-            SciftanDbContext db = new SciftanDbContext();
-            FREELANCER_SKILL_INFO_Model fSkills = new FREELANCER_SKILL_INFO_Model();
-            fSkills.Skills = db.SKILLs.ToList();
-            return View(fSkills);
+            var freelancerSkills = new FREELANCER_SKILL_INFO_Model();
+            freelancerSkills.Skills = _iSkillService.GetAllSkill();
+            return View(freelancerSkills);
         }
 
         [HttpPost]
@@ -59,7 +60,12 @@ namespace SCIFTAN.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
+
             FREELANCER_SKILL_INFO_Model fREELANCER_SKILL_INFO_Model = _iFreelancerSkillInfoService.GetById(id);
+            fREELANCER_SKILL_INFO_Model.Skills = _iSkillService.GetAllSkill();
+
+            ViewBag.DepartmentId = new SelectList(fREELANCER_SKILL_INFO_Model.Skills, "Id", "Name", fREELANCER_SKILL_INFO_Model.Skill);
+
             if (fREELANCER_SKILL_INFO_Model == null)
             {
                 return HttpNotFound();

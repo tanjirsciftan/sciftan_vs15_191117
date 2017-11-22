@@ -13,6 +13,7 @@ namespace SCIFTAN.BLL.Models
         public string Freelancer_Id { get; set; }
         public Nullable<int> Skill { get; set; }
         public string Description { get; set; }
-        public List<SKILL> Skills { get; set; }
+        public string SkillName { get; set; }
+        public List<SKILL_Model> Skills { get; set; }
     }
 }

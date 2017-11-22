@@ -89,12 +89,14 @@
     <Compile Include="IRepository\IFreelancerExperienceInfoRepository.cs" />
     <Compile Include="IRepository\IFreelancerPersonalInfoRepository.cs" />
     <Compile Include="IRepository\IFreelancerSkillInfoRepository.cs" />
+    <Compile Include="IRepository\ISkillRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\FreelancerCareerObjectiveRepository.cs" />
     <Compile Include="Repository\FrelancerEducationInfoRepository.cs" />
     <Compile Include="Repository\FrelancerExperienceInfoRepository.cs" />
     <Compile Include="Repository\FrelancerPersonalInfoRepository.cs" />
     <Compile Include="Repository\FrelancerSkillInfoRepository.cs" />
+    <Compile Include="Repository\SkillRepository.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
