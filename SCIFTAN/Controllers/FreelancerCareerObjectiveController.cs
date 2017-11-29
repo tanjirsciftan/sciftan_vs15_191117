@@ -4,7 +4,7 @@ using System.Data;
 using System.Data.Entity;
 using System.Linq;
 using System.Net;
-using System.Web;
+using System.Web; 
 using System.Web.Mvc;
 using SCIFTAN.BLL.Models;
 using SCIFTAN.DAL.DB.EF;
@@ -13,6 +13,7 @@ using Microsoft.AspNet.Identity;
 
 namespace SCIFTAN.Controllers
 {
+    [Authorize]
     public class FreelancerCareerObjectiveController : Controller
     {
         private readonly IFreelancerCareerObjectiveService _iFreelancerCareerObjectiveService;

@@ -89,6 +89,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IService\IFreelancerCareerObjectiveService.cs" />
+    <Compile Include="IService\IFreelancerDocService.cs" />
     <Compile Include="IService\IFreelancerEducationInfoService.cs" />
     <Compile Include="IService\IFreelancerExperienceInfoService.cs" />
     <Compile Include="IService\IFreelancerPersonalInfoService.cs" />
@@ -102,10 +103,12 @@
     <Compile Include="Models\FREELANCER_EDUCATION_INFO_Model.cs" />
     <Compile Include="Models\FREELANCER_EXPERIENCE_INFO_Model.cs" />
     <Compile Include="Models\FREELANCER_PERSONAL_INFO_Model.cs" />
+    <Compile Include="Models\FREELANCER_RESUME_Model.cs" />
     <Compile Include="Models\FREELANCER_SKILL_INFO_Model.cs" />
     <Compile Include="Models\SKILL_Model.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service\FreelancerCareerObjectiveService.cs" />
+    <Compile Include="Service\FreelancerDocService.cs" />
     <Compile Include="Service\FreelancerEducationInfoService.cs" />
     <Compile Include="Service\FreelancerExperienceInfoService.cs" />
     <Compile Include="Service\FreelancerPersonalInfoService.cs" />

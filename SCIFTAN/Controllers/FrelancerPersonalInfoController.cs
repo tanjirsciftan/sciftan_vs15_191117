@@ -6,6 +6,7 @@ using SCIFTAN.BLL.Models;
 
 namespace SCIFTAN.Controllers
 { 
+    [Authorize]
     public class FreelancerPersonalInfoController : Controller
     {
 

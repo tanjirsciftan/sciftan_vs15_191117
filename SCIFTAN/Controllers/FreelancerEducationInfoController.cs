@@ -8,6 +8,7 @@ using SCIFTAN.BLL.Models;
 
 namespace SCIFTAN.Controllers
 {
+    [Authorize]
     public class FreelancerEducationInfoController : Controller
     {
         private readonly IFreelancerEducationInfoService _iFreelancerEducationInfoService;

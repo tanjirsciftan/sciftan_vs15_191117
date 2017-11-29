@@ -31,6 +31,8 @@ namespace SCIFTAN
             container.RegisterType<IFreelancerSkillInfoService, FreelancerSkillInfoService>();
             container.RegisterType<IFreelancerCareerObjectiveRepository, FreelancerCareerObjectiveRepository>();
             container.RegisterType<IFreelancerCareerObjectiveService, FreelancerCareerObjectiveService>();
+            container.RegisterType<IFreelancerDocRepository, FreelancerDocRepository>();
+            container.RegisterType<IFreelancerDocService, FreelancerDocService>();
             container.RegisterType<ISkillRepository, SkillRepository>();
             container.RegisterType<ISkillService, SkillService>();
 

@@ -12,9 +12,9 @@
       <PropertyRef Name="Freelancer_Id" />
     </Key>
     <Property Name="Freelancer_Id" Type="nvarchar" MaxLength="50" Nullable="false" />
-    <Property Name="NID_Path" Type="nvarchar" MaxLength="250" />
-    <Property Name="Picture_Path" Type="nvarchar" MaxLength="250" />
-    <Property Name="PVC_Path" Type="nvarchar" MaxLength="250" />
+    <Property Name="NID_Path" Type="nvarchar" MaxLength="450" />
+    <Property Name="Picture_Path" Type="nvarchar" MaxLength="450" />
+    <Property Name="PVC_Path" Type="nvarchar" MaxLength="450" />
   </EntityType>
   <EntityType Name="FREELANCER_EDUCATION_INFO">
     <Key>

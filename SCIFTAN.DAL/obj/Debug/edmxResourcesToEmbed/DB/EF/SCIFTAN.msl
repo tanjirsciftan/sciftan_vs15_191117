@@ -44,16 +44,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="FREELANCER_DOC_INFO">
-      <EntityTypeMapping TypeName="SciftanModel.FREELANCER_DOC_INFO">
-        <MappingFragment StoreEntitySet="FREELANCER_DOC_INFO">
-          <ScalarProperty Name="PVC_Path" ColumnName="PVC_Path" />
-          <ScalarProperty Name="Picture_Path" ColumnName="Picture_Path" />
-          <ScalarProperty Name="NID_Path" ColumnName="NID_Path" />
-          <ScalarProperty Name="Freelancer_Id" ColumnName="Freelancer_Id" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="FREELANCER_EXPERIENCE_INFO">
       <EntityTypeMapping TypeName="SciftanModel.FREELANCER_EXPERIENCE_INFO">
         <MappingFragment StoreEntitySet="FREELANCER_EXPERIENCE_INFO">
@@ -84,6 +74,16 @@
           <ScalarProperty Name="Skill" ColumnName="Skill" />
           <ScalarProperty Name="Freelancer_Id" ColumnName="Freelancer_Id" />
           <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FREELANCER_DOC_INFO">
+      <EntityTypeMapping TypeName="SciftanModel.FREELANCER_DOC_INFO">
+        <MappingFragment StoreEntitySet="FREELANCER_DOC_INFO">
+          <ScalarProperty Name="PVC_Path" ColumnName="PVC_Path" />
+          <ScalarProperty Name="Picture_Path" ColumnName="Picture_Path" />
+          <ScalarProperty Name="NID_Path" ColumnName="NID_Path" />
+          <ScalarProperty Name="Freelancer_Id" ColumnName="Freelancer_Id" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

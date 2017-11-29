@@ -1,0 +1,47 @@
+﻿@model SCIFTAN.BLL.Models.FREELANCER_DOC_INFO_Model
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+@if(Model!=null)
+{ 
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NID_Path)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Picture_Path)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PVC_Path)
+        </th>
+        <th></th>
+    </tr>
+
+
+    <tr>
+        <td>
+           <img src="@Url.Content(Model.Picture_Path)" alt="Image" height="400" width="400" />
+        </td>
+        <td>
+            <img src="@Url.Content(Model.NID_Path)" alt="Image" height="400" width="400" />
+        </td>
+        <td>
+            <img src="@Url.Content(Model.PVC_Path)" alt="Image" height="400" width="400" />
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id= Model.Freelancer_Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id= Model.Freelancer_Id })
+        </td>
+    </tr>
+
+</table>
+}

@@ -211,8 +211,10 @@
     <Compile Include="App_Start\UnityConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\FreelancerCareerObjectiveController.cs" />
+    <Compile Include="Controllers\FreelancerDocController.cs" />
     <Compile Include="Controllers\FreelancerEducationInfoController.cs" />
     <Compile Include="Controllers\FreelancerExperienceInfoController.cs" />
+    <Compile Include="Controllers\FreelancerResumeController.cs" />
     <Compile Include="Controllers\FreelancerSkillInfoController.cs" />
     <Compile Include="Controllers\FrelancerPersonalInfoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -289,9 +291,16 @@
     <Content Include="Views\FreelancerCareerObjective\Index.cshtml" />
     <Content Include="Views\FreelancerCareerObjective\Create.cshtml" />
     <Content Include="Views\FreelancerCareerObjective\Edit.cshtml" />
+    <Content Include="Views\FreelancerDoc\Create.cshtml" />
+    <Content Include="Views\FreelancerDoc\Delete.cshtml" />
+    <Content Include="Views\FreelancerDoc\Details.cshtml" />
+    <Content Include="Views\FreelancerDoc\Edit.cshtml" />
+    <Content Include="Views\FreelancerDoc\Index.cshtml" />
+    <Content Include="Views\FreelancerResume\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="UploadFiles\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

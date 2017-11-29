@@ -28,10 +28,9 @@ namespace SCIFTAN.DAL.DB.EF
         public virtual DbSet<FREELANCER_PERSONAL_INFO> FREELANCER_PERSONAL_INFO { get; set; }
         public virtual DbSet<FREELANCER_EDUCATION_INFO> FREELANCER_EDUCATION_INFO { get; set; }
         public virtual DbSet<FREELANCER_CAREER_OBJECTIVE> FREELANCER_CAREER_OBJECTIVE { get; set; }
-        public virtual DbSet<FREELANCER_DOC_INFO> FREELANCER_DOC_INFO { get; set; }
         public virtual DbSet<FREELANCER_EXPERIENCE_INFO> FREELANCER_EXPERIENCE_INFO { get; set; }
         public virtual DbSet<SKILL> SKILLs { get; set; }
         public virtual DbSet<FREELANCER_SKILL_INFO> FREELANCER_SKILL_INFO { get; set; }
-
+        public virtual DbSet<FREELANCER_DOC_INFO> FREELANCER_DOC_INFO { get; set; }
     }
 }
