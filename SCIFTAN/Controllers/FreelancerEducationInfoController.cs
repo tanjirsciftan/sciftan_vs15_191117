@@ -80,25 +80,9 @@ namespace SCIFTAN.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            FREELANCER_EDUCATION_INFO_Model fREELANCER_EDUCATION_INFO_Model = _iFreelancerEducationInfoService.GetById(id);
-            if (fREELANCER_EDUCATION_INFO_Model == null)
-            {
-                return HttpNotFound();
-            }
-            return View(fREELANCER_EDUCATION_INFO_Model);
-        }
-
-        // POST: FreelancerPersonalInfo/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public ActionResult DeleteConfirmed(int? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
             _iFreelancerEducationInfoService.DeleteFreelancerEducation(id);
             return RedirectToAction("Index");
+
         }
 
     }

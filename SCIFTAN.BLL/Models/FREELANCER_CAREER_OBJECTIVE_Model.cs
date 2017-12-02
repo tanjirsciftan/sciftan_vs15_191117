@@ -11,6 +11,8 @@ namespace SCIFTAN.BLL.Models
     {
         [Key]
         public string Freelancer_Id { get; set; }
+        [Required]
+        [Display(Name = "Career Objective")]
         public string Career_Objective { get; set; }
     }
 }

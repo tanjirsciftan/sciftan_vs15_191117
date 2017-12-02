@@ -86,26 +86,10 @@ namespace SCIFTAN.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            FREELANCER_EXPERIENCE_INFO_Model fREELANCER_EXPERIENCE_INFO_Model = _iFreelancerExperienceInfoService.GetById(id);
-            if (fREELANCER_EXPERIENCE_INFO_Model == null)
-            {
-                return HttpNotFound();
-            }
-            return View(fREELANCER_EXPERIENCE_INFO_Model);
-        }
-
-        // POST: FreelancerExperienceInfo/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public ActionResult DeleteConfirmed(int id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
             _iFreelancerExperienceInfoService.DeleteFreelancerExperience(id);
             return RedirectToAction("Index");
         }
+
 
     }
 }

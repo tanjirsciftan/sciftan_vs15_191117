@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SCIFTAN.BLL", "SCIFTAN.BLL\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SCIFTAN.WEB", "SCIFTAN\SCIFTAN.WEB.csproj", "{F9D1A2B9-6F03-4393-8B3A-0E8EF0EBF34D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SCIFTAN.API", "SCIFTAN.API\SCIFTAN.API.csproj", "{7481925C-A3E1-4F31-856E-40CBA5FF9DB8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{F9D1A2B9-6F03-4393-8B3A-0E8EF0EBF34D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F9D1A2B9-6F03-4393-8B3A-0E8EF0EBF34D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F9D1A2B9-6F03-4393-8B3A-0E8EF0EBF34D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7481925C-A3E1-4F31-856E-40CBA5FF9DB8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7481925C-A3E1-4F31-856E-40CBA5FF9DB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7481925C-A3E1-4F31-856E-40CBA5FF9DB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7481925C-A3E1-4F31-856E-40CBA5FF9DB8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -13,7 +13,7 @@ using Microsoft.AspNet.Identity;
 
 namespace SCIFTAN.Controllers
 {
-    [Authorize]
+   // [Authorize]
     public class FreelancerSkillInfoController : Controller
     {
         private readonly IFreelancerSkillInfoService _iFreelancerSkillInfoService;
@@ -89,26 +89,9 @@ namespace SCIFTAN.Controllers
             }
             return View(fREELANCER_SKILL_INFO_Model);
         }
-
+          
         // GET: FreelancerSkillInfo/Delete/5
         public ActionResult Delete(int? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            FREELANCER_SKILL_INFO_Model fREELANCER_Skill_INFO_Model = _iFreelancerSkillInfoService.GetById(id);
-            if (fREELANCER_Skill_INFO_Model == null)
-            {
-                return HttpNotFound();
-            }
-            return View(fREELANCER_Skill_INFO_Model);
-        }
-
-        // POST: FreelancerSkillInfo/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public ActionResult DeleteConfirmed(int? id)
         {
             if (id == null)
             {
@@ -117,6 +100,8 @@ namespace SCIFTAN.Controllers
             _iFreelancerSkillInfoService.DeleteFreelancerSkill(id);
             return RedirectToAction("Index");
         }
+
+
 
     }
 }

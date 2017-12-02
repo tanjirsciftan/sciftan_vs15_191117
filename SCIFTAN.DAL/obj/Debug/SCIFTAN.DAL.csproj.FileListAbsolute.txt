@@ -48,3 +48,13 @@ E:\TANJIR\OTHERS\sciftan_vs15\sciftan_vs15_191117\SCIFTAN.DAL\bin\Debug\EntityFr
 E:\TANJIR\OTHERS\sciftan_vs15\sciftan_vs15_191117\SCIFTAN.DAL\obj\Debug\SCIFTAN.DAL.dll
 E:\TANJIR\OTHERS\sciftan_vs15\sciftan_vs15_191117\SCIFTAN.DAL\obj\Debug\SCIFTAN.DAL.pdb
 E:\TANJIR\OTHERS\sciftan_vs15\sciftan_vs15_191117\SCIFTAN.DAL\obj\Debug\SCIFTAN.DAL.csprojResolveAssemblyReference.cache
+E:\PROJECTS\Self Projects\SCIFTAN\SCIFTAN_SRC_GIT\SCIFTAN.DAL\bin\Debug\SCIFTAN.DAL.dll.config
+E:\PROJECTS\Self Projects\SCIFTAN\SCIFTAN_SRC_GIT\SCIFTAN.DAL\bin\Debug\SCIFTAN.DAL.dll
+E:\PROJECTS\Self Projects\SCIFTAN\SCIFTAN_SRC_GIT\SCIFTAN.DAL\bin\Debug\SCIFTAN.DAL.pdb
+E:\PROJECTS\Self Projects\SCIFTAN\SCIFTAN_SRC_GIT\SCIFTAN.DAL\bin\Debug\EntityFramework.dll
+E:\PROJECTS\Self Projects\SCIFTAN\SCIFTAN_SRC_GIT\SCIFTAN.DAL\bin\Debug\EntityFramework.SqlServer.dll
+E:\PROJECTS\Self Projects\SCIFTAN\SCIFTAN_SRC_GIT\SCIFTAN.DAL\bin\Debug\EntityFramework.xml
+E:\PROJECTS\Self Projects\SCIFTAN\SCIFTAN_SRC_GIT\SCIFTAN.DAL\bin\Debug\EntityFramework.SqlServer.xml
+E:\PROJECTS\Self Projects\SCIFTAN\SCIFTAN_SRC_GIT\SCIFTAN.DAL\obj\Debug\SCIFTAN.DAL.csprojResolveAssemblyReference.cache
+E:\PROJECTS\Self Projects\SCIFTAN\SCIFTAN_SRC_GIT\SCIFTAN.DAL\obj\Debug\SCIFTAN.DAL.dll
+E:\PROJECTS\Self Projects\SCIFTAN\SCIFTAN_SRC_GIT\SCIFTAN.DAL\obj\Debug\SCIFTAN.DAL.pdb

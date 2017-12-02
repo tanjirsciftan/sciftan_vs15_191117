@@ -45,7 +45,14 @@ namespace SCIFTAN.Controllers
                 if (user != null)
                 {
                     await SignInAsync(user, model.RememberMe);
-                    return RedirectToLocal(returnUrl);
+                    if (returnUrl != null)
+                    {
+                        return RedirectToLocal(returnUrl);
+                    }
+                    else
+                    {
+                        return Redirect("/FreelancerDashboard/Index");
+                    }
                 }
                 else
                 {

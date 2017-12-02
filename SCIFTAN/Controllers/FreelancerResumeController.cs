@@ -9,6 +9,7 @@ using System.Web.Mvc;
 
 namespace SCIFTAN.Controllers
 {
+    [Authorize]
     public class FreelancerResumeController : Controller
     {
         private readonly IFreelancerCareerObjectiveService _iFreelancerCareerObjectiveService;

@@ -5,141 +5,147 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Index</h2>
 
 <div>
-    <h4>FREELANCER_PERSONAL_INFO_Model</h4>
-    @if (Model == null)
-    {
-        @Html.ActionLink("Add", "Create", "FreelancerPersonalInfo")
-    }
     <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.FirstName)
-        </dt>
+    <h4>Personal Information</h4>
+    <hr />
+    <div class="well">
+        @if (Model == null)
+        {
+            @Html.ActionLink("Add", "Create", "FreelancerPersonalInfo")
+        }
+@if (Model != null)
+{
+        <table class="table table-striped table-hover">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.FirstName)
+                </th>
+                <td>
+                    @Html.DisplayFor(model => model.FirstName)
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.LastName)
+                </th>
+                <td>
+                    @Html.DisplayFor(model => model.LastName)
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.FatherName)
+                </th>
+                <td>
+                    @Html.DisplayFor(model => model.FatherName)
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.MotherName)
+                </th>
+                <td>
+                    @Html.DisplayFor(model => model.MotherName)
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.DOB)
+                </th>
+                <td>
+                    @Html.DisplayFor(model => model.DOB)
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Gender)
+                </th>
+                <td>
+                    @Html.DisplayFor(model => model.Gender)
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Religion)
+                </th>
+                <td>
+                    @Html.DisplayFor(model => model.Religion)
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.MaritalStatus)
+                </th>
+                <td>
+                    @Html.DisplayFor(model => model.MaritalStatus)
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Nationality)
+                </th>
+                <td>
+                    @Html.DisplayFor(model => model.Nationality)
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.NID)
+                </th>
+                <td>
+                    @Html.DisplayFor(model => model.NID)
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Mobile1)
+                </th>
+                <td>
+                    @Html.DisplayFor(model => model.Mobile1)
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Mobile2)
+                </th>
+                <td>
+                    @Html.DisplayFor(model => model.Mobile2)
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Email)
+                </th>
+                <td>
+                    @Html.DisplayFor(model => model.Email)
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.PresentAddress)
+                </th>
+                <td>
+                    @Html.DisplayFor(model => model.PresentAddress)
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.PermanentAddress)
+                </th>
+                <td>
+                    @Html.DisplayFor(model => model.PermanentAddress)
+                </td>
+            </tr>
+        </table>
+}
+    </div>
 
-        <dd>
-            @Html.DisplayFor(model => model.FirstName)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.LastName)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.LastName)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.FatherName)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.FatherName)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.MotherName)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.MotherName)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.DOB)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.DOB)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Gender)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Gender)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Religion)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Religion)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.MaritalStatus)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.MaritalStatus)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Nationality)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Nationality)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.NID)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.NID)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.PresentAddress)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.PresentAddress)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.PermanentAddress)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.PermanentAddress)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Mobile1)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Mobile1)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Mobile2)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Mobile2)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Email)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Email)
-        </dd>
-
-    </dl>
+    <p>
+        @if (Model != null)
+        {
+            @Html.ActionLink("Update", "Edit", "FreelancerPersonalInfo", new { @class = "btn btn-warning" })
+        }
+    </p>
 </div>
-<p>
-    @if (Model != null)
-    {
-        @Html.ActionLink("Edit", "Edit", "FreelancerPersonalInfo")
-    }
-</p>

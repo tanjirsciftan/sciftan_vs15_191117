@@ -5,29 +5,25 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Index</h2>
-
-<div>
-    <h4>FREELANCER_CAREER_OBJECTIVE_Model</h4>
+    <hr />
+    <h4>Career Objective</h4>
+    <hr />
+<div class="well">
     @if (Model == null)
     {
         @Html.ActionLink("Add", "Create", "FreelancerCareerObjective")
     }
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Career_Objective)
-        </dt>
+    <div>
 
-        <dd>
-            @Html.DisplayFor(model => model.Career_Objective)
-        </dd>
+        @Html.DisplayFor(model => model.Career_Objective)
 
-    </dl>
-</div>
+    </div>
+   
+    </div>
+
 <p>
     @if (Model != null)
     {
-        @Html.ActionLink("Edit", "Edit", "FreelancerCareerObjective")
+        @Html.ActionLink("Update", "Edit", "FreelancerCareerObjective", new { @class = "btn btn-warning" })
     }
 </p>
