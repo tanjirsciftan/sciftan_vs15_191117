@@ -13,7 +13,7 @@ using Microsoft.AspNet.Identity;
 
 namespace SCIFTAN.Controllers
 {
-   // [Authorize]
+   [Authorize]
     public class FreelancerSkillInfoController : Controller
     {
         private readonly IFreelancerSkillInfoService _iFreelancerSkillInfoService;

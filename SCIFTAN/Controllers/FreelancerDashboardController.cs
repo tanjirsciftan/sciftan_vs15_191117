@@ -8,7 +8,7 @@ namespace SCIFTAN.Controllers
 {
     public class FreelancerDashboardController : Controller
     {
-
+        [Authorize]
         public ActionResult Index()
         {
             return View();

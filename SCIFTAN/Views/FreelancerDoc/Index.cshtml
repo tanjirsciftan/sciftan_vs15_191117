@@ -14,38 +14,68 @@
             @Html.ActionLink("Add", "Create")
         }
     </p>
-@if (Model != null)
-{
-    <table class="table">
-        <tr>
-            <td>Photo</td>
-            <td>National Identity Card</td>
-            <td>Police Verification Certificate</td>
-        </tr>
-        <tr>
-            <td>
-                @if (Model.Picture_Path != null)
-                {
-                    <img src="@Url.Content(Model.Picture_Path)" alt="Image" height="150" width="150" />
-                }
-            </td>
-            <td>
-            <td>
-                @if (Model.NID_Path != null)
-                {
-                    <img src="@Url.Content(Model.NID_Path)" alt="Image" height="150" width="320" />}
-            </td>
-            <td>
-                @if (Model.PVC_Path != null)
-                {
-                <img src="@Url.Content(Model.PVC_Path)" alt="Image" height="150" width="320" />}
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id = Model.Freelancer_Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id = Model.Freelancer_Id })
-        </td>
-    </tr>
+    @if (Model != null)
+    {
+        <div class="row">
+            <div class="col-md-3">
+                <table class="table table-bordered">
+                    <tr class="success">
+                        <th>PVC</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            @if (Model.Picture_Path != null)
+                            {
+                                <img src="@Url.Content(Model.Picture_Path)" alt="Image" class="img-thumbnail" height="150" width="520" />
+                            }
+                        </td>
+                    </tr>
 
-</table>
-}
+                </table>
+            </div>
+            <div class="col-md-3">
+                <table class="table table-bordered">
+                    <tr class="success">
+                        <th>NID</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            @if (Model.NID_Path != null)
+                            {
+                                <img src="@Url.Content(Model.NID_Path)" alt="Image" class="img-thumbnail" height="150" width="520" />
+                            }
+                        </td>
+                    </tr>
+
+                </table>
+            </div>
+            <div class="col-md-3">
+                <table class="table table-bordered">
+                    <tr class="success">
+                        <th>PVC</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            @if (Model.PVC_Path != null)
+                            {
+                                <img src="@Url.Content(Model.PVC_Path)" alt="Image" class="img-thumbnail" height="150" width="520" />
+                            }
+                        </td>
+                    </tr>
+
+                </table>
+            </div>
+            <div class="col-md-3">
+                <table class="table">
+                    <tr>
+                        <td>
+                            @Html.ActionLink("Edit", "Edit", new { id = Model.Freelancer_Id }) |
+                            @Html.ActionLink("Delete", "Delete", new { id = Model.Freelancer_Id })
+                        </td>
+                    </tr>
+
+                </table>
+            </div>
+        </div>
+    }
 </div>

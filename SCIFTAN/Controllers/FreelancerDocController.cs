@@ -14,6 +14,7 @@ using System.IO;
 
 namespace SCIFTAN.Controllers
 {
+    [Authorize]
     public class FreelancerDocController : Controller
     {
         private readonly IFreelancerDocService _iFreelancerDocService;
@@ -95,7 +96,7 @@ namespace SCIFTAN.Controllers
 
             if (_iFreelancerDocService.InsertFreelancerDoc(fREELANCER_DOC_INFO_Model))
             {
-                return RedirectToAction("Create");
+                return RedirectToAction("Index");
             }
 
 

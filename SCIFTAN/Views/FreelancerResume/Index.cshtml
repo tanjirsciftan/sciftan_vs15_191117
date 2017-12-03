@@ -4,4 +4,359 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Resume</h2>
+<div class="container">
+    <hr />
+    <div class="row">
+        <div class="col-md-8">
+            @if (Model != null)
+            {
+                <h4 style="color:dodgerblue;"><strong>@Model.PersonalInfo.FirstName @Model.PersonalInfo.LastName</strong> </h4>
+                <h5>@Model.PersonalInfo.PresentAddress</h5>
+                <h5>@Model.PersonalInfo.Mobile1</h5>
+                <h5>@Model.PersonalInfo.Email</h5>
+            }
+        </div>
+        <div class="col-md-4" style="float: right;">
+            <div style="float: right;">
+                @if (Model.Docs != null)
+            {
+                if (Model.Docs.Picture_Path != null)
+                {
+                        <img src="@Url.Content(Model.Docs.Picture_Path)" alt="Image" class="img-thumbnail" height="450" width="200" />
+                    }
+                }
+            </div>
+        </div>
+    </div>
+    <hr />
+
+
+    <div class="panel panel-default">
+        <div class="panel-heading"><h5><i><strong>Career Objective</strong> </i></h5></div>
+        <div class="panel-body">@Model.CareerObjective.Career_Objective</div>
+    </div>
+
+
+    <div class="panel panel-default">
+        <div class="panel-heading"><h5><i><strong>Professional Skills</strong> </i></h5></div>
+        <div class="panel-body">
+            <table class="table table-condensed table-responsive table-hover table-striped table-bordered">
+                <tr class="success">
+                    <th>
+                        Skill
+                    </th>
+                    <th>
+                        Description
+                    </th>
+
+                </tr>
+
+                @if (Model.Skills != null)
+                {
+                    foreach (var item in Model.Skills)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.SkillName)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Description)
+                            </td>
+                        </tr>
+                    }
+                }
+
+            </table>
+        </div>
+    </div>
+
+
+    <div class="panel panel-default">
+        <div class="panel-heading"><h5><i><strong>Professional Experience</strong> </i></h5></div>
+        <div class="panel-body">
+            <table class="table table-condensed table-responsive table-hover table-striped table-bordered">
+                <tr class="success">
+                    <th>
+                        Organization
+                    </th>
+                    <th>
+                        Designation
+                    </th>
+                    <th>
+                        Responsibilities
+                    </th>
+                    <th>
+                        Area of Experience
+                    </th>
+                    <th>
+                        Location
+                    </th>
+                    <th>
+                        FromDate
+                    </th>
+                    <th>
+                        ToDate
+                    </th>
+                </tr>
+                @if (Model.Experiences != null)
+                {
+                    foreach (var item in Model.Experiences)
+                    {
+                        <tr>
+
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Organization)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Designation)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Responsibilities)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.AreaofExperiences)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Location)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.FromDate)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.ToDate)
+                            </td>
+                        </tr>
+                    }
+                }
+
+            </table>
+        </div>
+    </div>
+
+
+    <div class="panel panel-default">
+        <div class="panel-heading"><h5><i><strong>Educational Qualification</strong> </i></h5></div>
+        <div class="panel-body">
+            <table class="table table-condensed table-responsive table-hover table-striped table-bordered">
+                <tr class="success">
+                    <th>
+                        Degree
+                    </th>
+                    <th>
+                        Institute
+                    </th>
+                    <th>
+                        Year
+                    </th>
+                    <th>
+                        Result
+                    </th>
+                    <th>
+                        Subject
+                    </th>
+                </tr>
+
+                @if (Model.Educations != null)
+                {
+                    foreach (var item in Model.Educations)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Degree)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Institute)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Year)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Result)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Subject)
+                            </td>
+                        </tr>
+                    }
+                }
+
+            </table>
+        </div>
+    </div>
+
+
+    <div class="panel panel-default">
+        <div class="panel-heading"><h5><i><strong>Personal Information</strong> </i></h5></div>
+        <div class="panel-body">
+            @if (Model.PersonalInfo != null)
+            {
+                <table class="table table-striped table-hover table-bordered">
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(model => model.PersonalInfo.FirstName)
+                        </th>
+                        <td>
+                            @Html.DisplayFor(model => model.PersonalInfo.FirstName)
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(model => model.PersonalInfo.LastName)
+                        </th>
+                        <td>
+                            @Html.DisplayFor(model => model.PersonalInfo.LastName)
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(model => model.PersonalInfo.FatherName)
+                        </th>
+                        <td>
+                            @Html.DisplayFor(model => model.PersonalInfo.FatherName)
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(model => model.PersonalInfo.MotherName)
+                        </th>
+                        <td>
+                            @Html.DisplayFor(model => model.PersonalInfo.MotherName)
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(model => model.PersonalInfo.DOB)
+                        </th>
+                        <td>
+                            @Html.DisplayFor(model => model.PersonalInfo.DOB)
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(model => model.PersonalInfo.Gender)
+                        </th>
+                        <td>
+                            @Html.DisplayFor(model => model.PersonalInfo.Gender)
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(model => model.PersonalInfo.Religion)
+                        </th>
+                        <td>
+                            @Html.DisplayFor(model => model.PersonalInfo.Religion)
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(model => model.PersonalInfo.MaritalStatus)
+                        </th>
+                        <td>
+                            @Html.DisplayFor(model => model.PersonalInfo.MaritalStatus)
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(model => model.PersonalInfo.Nationality)
+                        </th>
+                        <td>
+                            @Html.DisplayFor(model => model.PersonalInfo.Nationality)
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(model => model.PersonalInfo.NID)
+                        </th>
+                        <td>
+                            @Html.DisplayFor(model => model.PersonalInfo.NID)
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(model => model.PersonalInfo.Mobile1)
+                        </th>
+                        <td>
+                            @Html.DisplayFor(model => model.PersonalInfo.Mobile1)
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(model => model.PersonalInfo.Mobile2)
+                        </th>
+                        <td>
+                            @Html.DisplayFor(model => model.PersonalInfo.Mobile2)
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(model => model.PersonalInfo.Email)
+                        </th>
+                        <td>
+                            @Html.DisplayFor(model => model.PersonalInfo.Email)
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(model => model.PersonalInfo.PresentAddress)
+                        </th>
+                        <td>
+                            @Html.DisplayFor(model => model.PersonalInfo.PresentAddress)
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(model => model.PersonalInfo.PermanentAddress)
+                        </th>
+                        <td>
+                            @Html.DisplayFor(model => model.PersonalInfo.PermanentAddress)
+                        </td>
+                    </tr>
+                </table>
+            }
+        </div>
+    </div>
+
+    <div class="panel panel-default">
+        <div class="panel-heading"><h5><i><strong>Documents</strong> </i></h5></div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-md-6">
+                    <table class="table table-bordered">
+                        <tr class="success">
+                            <th>NID</th>
+                        </tr>
+                        @if (Model.Docs != null)
+                        {
+                            <tr>
+                                <td>
+                                    @if (Model.Docs.NID_Path != null)
+                                    {
+                                        <img src="@Url.Content(Model.Docs.NID_Path)" alt="Image" class="img-thumbnail" height="150" width="520" />
+                                    }
+                                </td>
+                            </tr>
+                        }
+                    </table>
+                </div>
+                <div class="col-md-6">
+                    <table class="table table-bordered">
+                        <tr class="success">
+                            <th>PVC</th>
+                        </tr>@if (Model.Docs != null)
+                        {
+                            <tr>
+                                <td>
+                                    @if (Model.Docs.PVC_Path != null)
+                                    {
+                                        <img src="@Url.Content(Model.Docs.PVC_Path)" alt="Image" class="img-thumbnail" height="150" width="520" />
+                                    }
+                                </td>
+                            </tr>
+                        }
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
